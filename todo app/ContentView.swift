@@ -26,6 +26,7 @@ struct ContentView: View {
                         Image(systemName: "circle")
                     }
                     Text(todo.title)
+                        .strikethrough(todo.isCompleted)
                 }
             }
             .navigationTitle("Todos")
