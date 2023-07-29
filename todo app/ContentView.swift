@@ -11,22 +11,28 @@ struct ContentView: View {
     
     @State private var todos = [
         Todo(title: "Buy 20kg of Nutella"),
-        Todo(title: "Call a courier for 20kg of Nutella"),
+        Todo(title: "Call a courier for 20kg of Nutella", subtitle: "Might need a van"),
         Todo(title: "Pack 20kg of Nutella in office"),
         Todo(title: "Buy health insurance"),
         Todo(title: "Eat 20kg of Nutella"),
         Todo(title: "Regret life decisions")]
     var body: some View {
         NavigationStack {
-            List(todos) { todo in
+            List($todos) { $todo in
                 HStack {
-                    if todo.isCompleted == true {
-                        Image(systemName: "checkmark.circle.fill")
-                    } else {
-                        Image(systemName: "circle")
+                    Image(systemName: (todo.isCompleted == true ? "checkmark.circle.fill" : "circle"))
+                        .onTapGesture {
+                            todo.isCompleted.toggle()
+                        }
+                    VStack(alignment: .leading) {
+                        Text(todo.title)
+                        if !todo.subtitle.isEmpty {
+                            Text(todo.subtitle)
+                                .font(.footnote)
+                                .foregroundColor(.gray)
+                        }
                     }
-                    Text(todo.title)
-                        .strikethrough(todo.isCompleted)
+                    .strikethrough(todo.isCompleted)
                 }
             }
             .navigationTitle("Todos")
