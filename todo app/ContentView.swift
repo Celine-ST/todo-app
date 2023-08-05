@@ -24,6 +24,7 @@ struct ContentView: View {
                 } label: {
                     HStack {
                         Image(systemName: (todo.isCompleted == true ? "checkmark.circle.fill" : "circle"))
+                            .foregroundColor(todo.color)
                             .onTapGesture {
                                 todo.isCompleted.toggle()
                             }

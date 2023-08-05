@@ -17,6 +17,7 @@ struct TodoDetailView: View {
             TextField("Subtitle", text: $todo.subtitle)
                 .foregroundColor(.gray)
             Toggle("Completed?", isOn: $todo.isCompleted)
+            ColorPicker("Todo Colour", selection: $todo.color)
         }
         .navigationTitle("Todo Detail")
     }

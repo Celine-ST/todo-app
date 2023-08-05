@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Todo: Identifiable {
     let id = UUID()
     var title: String
     var subtitle = ""
+    var color: Color = .black
     var isCompleted = false
 }
