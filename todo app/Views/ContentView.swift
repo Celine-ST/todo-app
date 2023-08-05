@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @StateObject var todoManager = TodoManager()
     @State private var showAddSheet = false
+    @State private var showConfirmAlert = false
     var body: some View {
         NavigationStack {
             List($todoManager.todos, editActions: .all) { $todo in
@@ -40,7 +41,12 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
                 }
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItemGroup {
+                    Button {
+                    showConfirmAlert = true
+                    } label: {
+                    Image(systemName: "list.bullet.clipboard.fill")
+                    }
                     Button {
                         showAddSheet = true
                     } label: {
@@ -50,6 +56,11 @@ struct ContentView: View {
             }
             .sheet(isPresented: $showAddSheet) {
                 NewTodoView(sourceArray: $todoManager.todos)
+            }
+            .alert("Load sample data? Warning: This cannot be undone!", isPresented: $showConfirmAlert) {
+                Button("Replace", role: .destructive) {
+                    todoManager.loadSampleData()
+                }
             }
         }
     }
