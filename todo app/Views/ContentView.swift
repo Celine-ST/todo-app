@@ -42,11 +42,15 @@ struct ContentView: View {
                     EditButton()
                 }
                 ToolbarItemGroup {
+                    
+                    #if DEBUG
                     Button {
                     showConfirmAlert = true
                     } label: {
                     Image(systemName: "list.bullet.clipboard.fill")
                     }
+                    #endif
+                    
                     Button {
                         showAddSheet = true
                     } label: {
