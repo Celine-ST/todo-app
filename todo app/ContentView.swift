@@ -18,7 +18,7 @@ struct ContentView: View {
         Todo(title: "Regret life decisions")]
     var body: some View {
         NavigationStack {
-            List($todos) { $todo in
+            List($todos, editActions: [.all]) { $todo in
                 NavigationLink {
                     TodoDetailView(todo: $todo)
                 } label: {
@@ -41,6 +41,11 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Todos")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+            }
         }
     }
 }
