@@ -15,6 +15,7 @@
 		939CE9432A74C63C00454520 /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CE9422A74C63C00454520 /* TodoDetailView.swift */; };
 		939CE9452A7DE76000454520 /* NewTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CE9442A7DE76000454520 /* NewTodoView.swift */; };
 		939CE9492A7DF4DA00454520 /* TodoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CE9482A7DF4DA00454520 /* TodoManager.swift */; };
+		939CE94D2A7DFB1300454520 /* Todo+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CE94C2A7DFB1300454520 /* Todo+Sample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		939CE9422A74C63C00454520 /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
 		939CE9442A7DE76000454520 /* NewTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoView.swift; sourceTree = "<group>"; };
 		939CE9482A7DF4DA00454520 /* TodoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoManager.swift; sourceTree = "<group>"; };
+		939CE94C2A7DFB1300454520 /* Todo+Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+Sample.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				939CE9402A74BACA00454520 /* Todo.swift */,
+				939CE94C2A7DFB1300454520 /* Todo+Sample.swift */,
 				939CE9482A7DF4DA00454520 /* TodoManager.swift */,
 			);
 			path = "Model and ViewModel";
@@ -167,6 +170,7 @@
 			files = (
 				939CE9352A74BA0D00454520 /* ContentView.swift in Sources */,
 				939CE9492A7DF4DA00454520 /* TodoManager.swift in Sources */,
+				939CE94D2A7DFB1300454520 /* Todo+Sample.swift in Sources */,
 				939CE9412A74BACA00454520 /* Todo.swift in Sources */,
 				939CE9332A74BA0D00454520 /* todo_appApp.swift in Sources */,
 				939CE9452A7DE76000454520 /* NewTodoView.swift in Sources */,

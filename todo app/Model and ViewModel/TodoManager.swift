@@ -33,6 +33,10 @@ class TodoManager: ObservableObject {
         try? encodedTodos?.write(to: archiveURL, options: .noFileProtection)
     }
     
+    func loadSampleData() {
+    todos = Todo.sampleTodos
+    }
+    
     func load() {
         let archiveURL = getArchiveURL()
         let propertyListDecoder = PropertyListDecoder()
