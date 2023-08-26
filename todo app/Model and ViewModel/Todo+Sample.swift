@@ -8,11 +8,11 @@
 extension Todo {
 
 static let sampleTodos = [
-Todo(title: "Feed the cat", isCompleted: true),
-Todo(title: "Play with cat", subtitle: "Use his favourite String!"),
-Todo(title: "Get allergies"),
-Todo(title: "Run away from cat"),
-Todo(title: "Get a new cat")
+    Todo(title: "Feed the cat", color: .red, isCompleted: true),
+    Todo(title: "Play with cat", subtitle: "Use his favourite String!", color: .orange),
+    Todo(title: "Get allergies", color: .yellow),
+    Todo(title: "Run away from cat", color: .green),
+    Todo(title: "Get a new cat", color: .blue)
 ]
 
 }
